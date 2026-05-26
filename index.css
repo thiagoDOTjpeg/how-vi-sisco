@@ -1,0 +1,20 @@
+:root {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgba(240, 240, 238, 1);
+}
+
+#footer__main {
+  height: 80px;
+  margin: auto;
+  background-color: rgba(27, 67, 50, 0.85);
+  opacity: 25%;
+}
+
+#footer__main span {
+  color: rgba(53, 60, 76, 1);
+  font-weight: 300;
+  font-size: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+}
