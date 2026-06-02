@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SISCO — Sistema de Unidade de Conservação</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-dark:  #1a3a2a;
+      --green-mid:   #2d6a44;
+      --green-light: #4a9060;
+      --cream:       #edeae0;
+      --white:       #ffffff;
+      --text-dark:   #111a14;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+    }
+
+    .page {
+      min-height: 100vh;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 32px 36px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 22px;
+      flex-shrink: 0;
+    }
+
+    .logo {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 1.35rem;
+      letter-spacing: 0.15em;
+      color: var(--green-mid);
+      text-transform: uppercase;
+    }
+
+    .header-title {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      opacity: 0.6;
+    }
+
+    .hero {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      flex: 1;
+      min-height: 560px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.9s ease 0.1s forwards;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          160deg,
+          rgba(10,35,20,0.62) 0%,
+          rgba(10,30,18,0.12) 50%,
+          rgba(5,20,12,0.50) 100%
+        ),
+        url('https://images.unsplash.com/photo-1584467541268-b040f83be3fd?w=1600&q=85') center/cover no-repeat;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 28% 65%, transparent 35%, rgba(0,0,0,0.32) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 56px 64px;
+    }
+
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      max-width: 600px;
+      margin-bottom: 40px;
+      text-shadow: 0 3px 28px rgba(0,0,0,0.45);
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.85s ease 0.5s forwards;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.16);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1.5px solid rgba(255,255,255,0.52);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      padding: 15px 34px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: background 0.25s, border-color 0.25s, transform 0.2s;
+      width: fit-content;
+      opacity: 0;
+      animation: fadeUp 0.85s ease 0.78s forwards;
+    }
+
+    .btn-primary:hover {
+      background: rgba(255,255,255,0.28);
+      border-color: rgba(255,255,255,0.85);
+      transform: translateY(-3px);
+    }
+
+    .btn-arrow {
+      font-size: 1.15rem;
+      opacity: 0.72;
+      transition: transform 0.22s;
+    }
+    .btn-primary:hover .btn-arrow { transform: translateX(5px); }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: right;
+      padding: 14px 4px 0;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      color: var(--text-dark);
+      opacity: 0;
+      flex-shrink: 0;
+      animation: fadeIn 1s ease 1.1s forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      to { opacity: 0.42; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <span class="logo">SISCO</span>
+      <span class="header-title">Sistema de Unidade de Conservação</span>
+    </header>
+
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1 class="hero-headline">Conecte-se ao patrimônio ambiental catarinense</h1>
+        <button class="btn-primary" onclick="alert('Navegando para as unidades…')">
+          Ver unidades…
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+    <footer>© 2026 SISCO – Sistema de Unidade de Conservação</footer>
+
+  </div>
+</body>
+</html>
