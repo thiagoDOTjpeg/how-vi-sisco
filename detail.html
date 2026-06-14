@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SISCO — Unidade de Conservação</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page page-inner">
+      <header class="inner-header">
+        <span class="logo">SISCO</span>
+        <span class="header-title">Sistema de Unidade de Conservação</span>
+        <button class="btn-back" onclick="window.location.href='list.html'">Voltar</button>
+      </header>
+
+      <div class="detail-wrap">
+        <div class="detail-hero" id="detail-hero">
+          <div class="detail-hero-overlay"></div>
+          <h1 class="detail-hero-name" id="detail-name"></h1>
+        </div>
+
+        <div class="detail-info-row">
+          <div class="detail-info-item">
+            <span class="detail-info-pipe">|</span>
+            <span class="detail-info-key">Município:</span>
+            <span class="detail-info-val" id="d-municipio"></span>
+          </div>
+          <div class="detail-info-item">
+            <span class="detail-info-pipe">|</span>
+            <span class="detail-info-key">Instituição:</span>
+            <span class="detail-info-val" id="d-instituicao"></span>
+          </div>
+          <div class="detail-info-item">
+            <span class="detail-info-pipe">|</span>
+            <span class="detail-info-key">Criado em:</span>
+            <span class="detail-info-val" id="d-criado"></span>
+          </div>
+        </div>
+
+        <div class="detail-desc-block">
+          <p class="detail-desc-heading">Descrição:</p>
+          <p class="detail-desc-text" id="d-descricao"></p>
+        </div>
+
+        <button
+          class="btn-send-comm"
+          onclick="window.location.href='form.html'"
+        >
+          Enviar comunicado
+        </button>
+
+        <hr class="detail-divider" />
+
+        <div class="history-section">
+          <h3 class="history-heading">Histórico de Comunicados</h3>
+          <div class="history-grid" id="history-grid">
+            <p class="grid-loading" style="grid-column:1/-1">Carregando comunicados…</p>
+          </div>
+        </div>
+      </div>
+
+      <footer>© 2026 SISCO – Sistema de Unidade de Conservação</footer>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

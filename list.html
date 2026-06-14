@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SISCO — Unidades de Conservação</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page page-inner">
+      <header class="inner-header">
+        <span class="logo">SISCO</span>
+        <span class="header-title">Sistema de Unidade de Conservação</span>
+        <button class="btn-back" onclick="history.back()">Voltar</button>
+      </header>
+
+      <div class="list-layout">
+        <aside class="list-sidebar">
+          <h2 class="sidebar-title">Lista de<br />Unidades</h2>
+          <div class="sidebar-filters">
+            <p class="filter-section-label">FILTROS</p>
+            <div class="filter-item">
+              <span class="filter-item-label">Município</span>
+              <input
+                type="text"
+                class="filter-input"
+                id="f-municipio"
+                placeholder="Filtrar…"
+                oninput="renderGrid()"
+              />
+            </div>
+            <div class="filter-item">
+              <span class="filter-item-label">Pesquisar</span>
+              <input
+                type="text"
+                class="filter-input"
+                id="f-search"
+                placeholder="Buscar unidade…"
+                oninput="renderGrid()"
+              />
+            </div>
+          </div>
+        </aside>
+
+        <main class="list-main">
+          <div class="unit-grid" id="unit-grid"></div>
+        </main>
+      </div>
+
+      <footer>© 2026 SISCO – Sistema de Unidade de Conservação</footer>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

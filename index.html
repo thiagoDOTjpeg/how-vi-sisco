@@ -1,26 +1,39 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>SISCO - Sistema de Unidade de Conservação</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SISCO — Sistema de Unidade de Conservação</title>
+    <link rel="stylesheet" href="./index.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer id="footer__main">
-      <span>© 2026 SISCO - Sistema de Unidade de Conservação</span>
-    </footer>
+    <div class="page">
+      <header>
+        <span class="logo">SISCO</span>
+        <span class="header-title">Sistema de Unidade de Conservação</span>
+      </header>
+
+      <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <h1 class="hero-headline">
+            Conecte-se ao patrimônio ambiental catarinense
+          </h1>
+          <button
+            class="btn-primary"
+            onclick="window.location.href='list.html'"
+          >
+            Ver unidades…
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+      </section>
+
+      <footer>© 2026 SISCO – Sistema de Unidade de Conservação</footer>
+    </div>
   </body>
 </html>
-`
